@@ -1,0 +1,28 @@
+app-template:
+  controllers:
+    main:
+      strategy: Recreate
+      containers:
+        main:
+          image:
+            repository: ghcr.io/cscosu/vs-workspace
+            tag: latest
+            pullPolicy: IfNotPresent
+
+  service:
+    main:
+      ports:
+        http:
+          port: 8080
+
+  ingress:
+    main:
+      enabled: true
+      hosts:
+        - host: workspace.osucyber.club
+          paths:
+            - path: /
+              pathType: Prefix
+              service:
+                name: main
+                port: http
