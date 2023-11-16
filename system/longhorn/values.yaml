@@ -4,3 +4,5 @@ longhorn:
     priorityClass: system-cluster-critical
   persistence:
     defaultClassReplicaCount: 1
+  helmPreUpgradeCheckerJob:
+    enabled: false
