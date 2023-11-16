@@ -1,0 +1,7 @@
+gitops:
+  repo: https://github.com/cscosu/kinfra
+  revision: master
+stacks:
+  - name: bootstrap
+    namespace: argocd
+  - name: system

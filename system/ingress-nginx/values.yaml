@@ -1,0 +1,26 @@
+ingress-nginx:
+  controller:
+    config:
+      custom-http-errors: >-
+        401,403,404,500,501,502,503
+    ingressClassResource:
+      name: public
+      enabled: true
+      default: false
+      controllerValue: "k8s.io/ingress-nginx-public"
+    admissionWebhooks:
+      timeoutSeconds: 30
+    metrics:
+      enabled: true
+      serviceMonitor:
+        enabled: true
+  defaultBackend:
+    enabled: true
+    image:
+      repository: ghcr.io/tarampampam/error-pages
+      tag: latest
+    extraEnvs:
+      - name: TEMPLATE_NAME
+        value: connection
+      - name: SHOW_DETAILS
+        value: "true"

@@ -1,0 +1,21 @@
+argo-cd:
+  dex:
+    enabled: false
+  global:
+    priorityClassName: system-cluster-critical
+  configs:
+    cm:
+      statusbadge.enabled: "true"
+  server:
+    extraArgs:
+      - --insecure
+    metrics: &metrics
+      enabled: true
+      serviceMonitor:
+        enabled: true
+  controller:
+    metrics: *metrics
+  repoServer:
+    metrics: *metrics
+  redis:
+    metrics: *metrics

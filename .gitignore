@@ -1,0 +1,6 @@
+# kubernetes
+kubeconfig*.yaml
+
+# helm
+Chart.lock
+*.tgz
