@@ -10,10 +10,6 @@ ingress-nginx:
       controllerValue: "k8s.io/ingress-nginx-public"
     admissionWebhooks:
       timeoutSeconds: 30
-    metrics:
-      enabled: true
-      serviceMonitor:
-        enabled: true
   defaultBackend:
     enabled: true
     image:
