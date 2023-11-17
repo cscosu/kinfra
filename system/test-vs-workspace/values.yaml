@@ -8,6 +8,10 @@ app-template:
             repository: ghcr.io/cscosu/vs-workspace
             tag: latest
             pullPolicy: IfNotPresent
+          resources:
+            limits:
+              cpu: 300m
+              memory: 512Mi
 
   service:
     main:
