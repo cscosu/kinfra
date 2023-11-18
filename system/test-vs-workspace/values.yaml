@@ -10,9 +10,9 @@ app-template:
             pullPolicy: IfNotPresent
           resources:
             limits:
-              cpu: 300m
-              memory: 512Mi
-
+              cpu: 500m
+              memory: 768Mi
+          runtimeClassName: sysbox-runc
   service:
     main:
       ports:
