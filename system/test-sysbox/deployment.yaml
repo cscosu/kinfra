@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: sysbox
+  name: sysbox
+spec:
+  selector:
+    matchLabels:
+      app: sysbox
+  template:
+    metadata:
+      labels:
+        app: sysbox
+      annotations:
+        io.kubernetes.cri-o.userns-mode: "auto:size=65536"
+    spec:
+      runtimeClassName: sysbox-runc
+      containers:
+        - name: sysbox
+          image: ghcr.io/nestybox/ubuntu-bionic-systemd-docker
+          imagePullPolicy: Always
