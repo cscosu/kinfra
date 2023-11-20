@@ -1,6 +1,8 @@
 app-template:
   defaultPodOptions:
     hostname: cscosu
+    annotations:
+      io.kubernetes.cri-o.userns-mode: "auto:size=65536"
     runtimeClassName: sysbox-runc
   controllers:
     main:
