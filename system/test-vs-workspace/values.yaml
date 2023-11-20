@@ -10,7 +10,7 @@ app-template:
       containers:
         main:
           image:
-            repository: ghcr.io/cscosu/vs-workspace
+            repository: nestybox/ubuntu-focal-systemd-docker-custom
             tag: latest
             pullPolicy: Always
           resources:
