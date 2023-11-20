@@ -1,4 +1,7 @@
 app-template:
+  defaultPodOptions:
+    hostname: cscosu
+    runtimeClassName: sysbox-runc
   controllers:
     main:
       strategy: Recreate
@@ -12,7 +15,6 @@ app-template:
             limits:
               cpu: 500m
               memory: 768Mi
-          runtimeClassName: sysbox-runc
   service:
     main:
       ports:
