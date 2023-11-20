@@ -12,7 +12,7 @@ app-template:
           image:
             repository: ghcr.io/cscosu/vs-workspace
             tag: latest
-            pullPolicy: IfNotPresent
+            pullPolicy: Always
           resources:
             limits:
               cpu: 500m
