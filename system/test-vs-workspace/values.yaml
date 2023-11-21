@@ -22,15 +22,3 @@ app-template:
       ports:
         http:
           port: 8080
-
-  ingress:
-    main:
-      enabled: true
-      hosts:
-        - host: workspace.osucyber.club
-          paths:
-            - path: /
-              pathType: Prefix
-              service:
-                name: main
-                port: http
