@@ -6,7 +6,7 @@ app-template:
     runtimeClassName: sysbox-runc
   controllers:
     main:
-      replicas: 30
+      replicas: 48
       strategy: Recreate
       containers:
         main:
