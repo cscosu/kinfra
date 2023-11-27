@@ -17,13 +17,13 @@ app-template:
             repository: ghcr.io/cscosu/vs-workspace
             tag: latest
             pullPolicy: Always
-          resources:
-            limits:
-              cpu: 500m
-              memory: 768Mi
-            requests:
-              cpu: 10m
-              memory: 128Mi
+          # resources:
+          #   limits:
+          #     cpu: 500m
+          #     memory: 768Mi
+          #   requests:
+          #     cpu: 10m
+          #     memory: 128Mi
   service:
     main:
       ports:
