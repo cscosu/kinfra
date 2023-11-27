@@ -12,3 +12,11 @@ spec:
         - namespaceSelector:
             matchLabels:
               kubernetes.io/metadata.name: ingress-nginx
+  egress:
+    - to:
+        - ipBlock:
+            cidr: 0.0.0.0/0
+            except:
+              - 192.168.88.0/24
+              - 192.168.0.0/16
+              - 10.0.0.0/8
