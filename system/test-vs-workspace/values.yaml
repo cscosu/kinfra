@@ -1,13 +1,16 @@
 app-template:
   defaultPodOptions:
     hostname: cscosu
+    dnsPolicy: "None"
+    dnsConfig:
+      nameservers:
+        - "1.1.1.1"
     annotations:
       io.kubernetes.cri-o.userns-mode: "auto:size=65536"
     runtimeClassName: sysbox-runc
   controllers:
     main:
-      replicas: 48
-      strategy: Recreate
+      replicas: 1
       containers:
         main:
           image:
