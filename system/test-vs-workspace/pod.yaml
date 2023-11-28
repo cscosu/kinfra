@@ -15,8 +15,7 @@ spec:
   runtimeClassName: sysbox-runc
   containers:
     - name: test-vs-workspace
-      image: ghcr.io/cscosu/vs-workspace
-      tag: latest
+      image: ghcr.io/cscosu/vs-workspace:latest
       imagePullPolicy: Always
       resources:
         limits:
