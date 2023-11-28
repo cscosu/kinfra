@@ -2,9 +2,9 @@ app-template:
   defaultPodOptions:
     hostname: cscosu
     dnsPolicy: "None"
-    dnsConfig:
-      nameservers:
-        - "1.1.1.1"
+    # dnsConfig:
+    #   nameservers:
+    #     - "1.1.1.1"
     annotations:
       io.kubernetes.cri-o.userns-mode: "auto:size=65536"
     runtimeClassName: sysbox-runc
@@ -17,13 +17,13 @@ app-template:
             repository: ghcr.io/cscosu/vs-workspace
             tag: latest
             pullPolicy: Always
-          # resources:
-          #   limits:
-          #     cpu: 500m
-          #     memory: 768Mi
-          #   requests:
-          #     cpu: 10m
-          #     memory: 128Mi
+          resources:
+            limits:
+              cpu: 500m
+              memory: 768Mi
+            requests:
+              cpu: 10m
+              memory: 128Mi
   service:
     main:
       ports:
