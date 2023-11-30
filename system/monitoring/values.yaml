@@ -1,3 +1,5 @@
 kube-prometheus-stack:
   grafana:
-    enabled: false
+    persistence:
+      enabled: true
+      storageClass: longhorn
