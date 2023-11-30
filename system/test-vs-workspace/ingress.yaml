@@ -10,7 +10,7 @@ spec:
     - host: &host workspace.osucyber.club
       http:
         paths:
-          - path: /abc
+          - path: /
             pathType: Prefix
             backend:
               service:
