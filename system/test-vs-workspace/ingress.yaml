@@ -4,13 +4,14 @@ metadata:
   name: test-vs-workspace
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
+    ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: public
   rules:
     - host: &host workspace.osucyber.club
       http:
         paths:
-          - path: /
+          - path: /abc
             pathType: Prefix
             backend:
               service:
