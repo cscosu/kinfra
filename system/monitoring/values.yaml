@@ -4,3 +4,9 @@ kube-prometheus-stack:
     persistence:
       enabled: true
       storageClass: longhorn
+  prometheus:
+    prometheusSpec:
+      ruleSelectorNilUsesHelmValues: false
+      serviceMonitorSelectorNilUsesHelmValues: false
+      podMonitorSelectorNilUsesHelmValues: false
+      probeSelectorNilUsesHelmValues: false
