@@ -12,9 +12,6 @@ spec:
           route53:
             region: us-east-2
             accessKeyID: AKIA25HSULK4AW73AWPU
-            # accessKeyIDSecretRef:
-            #   name: aws
-            #   key: accessKeyID
             secretAccessKeySecretRef:
               name: aws
               key: secretAccessKey

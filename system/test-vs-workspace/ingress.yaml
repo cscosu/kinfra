@@ -4,14 +4,14 @@ metadata:
   name: test-vs-workspace
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
-    # external-dns.alpha.kubernetes.io/target: workspace.osucyber.club
 spec:
   ingressClassName: public
   rules:
     - host: &host workspace.osucyber.club
       http:
         paths:
-          - pathType: ImplementationSpecific
+          - path: /abc
+            pathType: Prefix
             backend:
               service:
                 name: test-vs-workspace
